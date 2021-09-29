@@ -1,10 +1,10 @@
-[1, 2, 3].each { |num| puts num }
+# [1, 2, 3].each { |num| puts num }
 
 def hello_block?
     yield
 end
 
-hello_block? {puts "Hello Block!"}
+# hello_block? {puts "Hello Block!"}
 
 def hello_empresand?(&block)
     puts block
@@ -15,13 +15,13 @@ def hello_emp(block)
    block.call 
 end
 
-block_var = -> { puts "Hello empersand!" }
-block_proc_var = Proc.new { puts "Hello empersand!" }
-hello_emp block_var
-hello_emp block_proc_var
+# block_var = -> { puts "Hello empersand!" }
+# block_proc_var = Proc.new { puts "Hello empersand!" }
+# hello_emp block_var
+# hello_emp block_proc_var
 
-hello_empresand? &Proc.new { puts "Hello empersand!" }
-hello_empresand? &Proc.new { puts "Hello empersand!" }
+# hello_empresand? &Proc.new { puts "Hello empersand!" }
+# hello_empresand? &Proc.new { puts "Hello empersand!" }
 
 def return_diff(num)
     puts num.call + 1
